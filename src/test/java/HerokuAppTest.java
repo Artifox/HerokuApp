@@ -11,8 +11,8 @@ public class HerokuAppTest {
 
     //classwork
     @Test
-    public void siteShouldByOpened(){
-        System.setProperty("webdriver.chrome.driver","src/test/resources/chromedriver.exe");
+    public void siteShouldByOpened() {
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         /*System.setProperty("webdriver.gecko.driver", "src/test/resources/geckodriver.exe");
         WebDriver driver = new FirefoxDriver();*/

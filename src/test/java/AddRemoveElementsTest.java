@@ -10,8 +10,8 @@ import java.util.concurrent.TimeUnit;
 public class AddRemoveElementsTest {
 
     @Test
-    public void amountOfDeleteButtonsTest(){
-        System.setProperty("webdriver.chrome.driver","src/test/resources/chromedriver.exe");
+    public void amountOfDeleteButtonsTest() {
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
