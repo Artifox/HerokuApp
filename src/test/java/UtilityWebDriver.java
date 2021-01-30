@@ -5,8 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 public final class UtilityWebDriver {
 
-    private UtilityWebDriver(String url) {
-
+    private UtilityWebDriver() {
     }
 
     public static WebDriver open(String url) {

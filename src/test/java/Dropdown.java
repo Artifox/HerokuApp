@@ -1,23 +1,18 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
-public class DropdownTest {
+public class Dropdown {
+    private static final String URL = "http://the-internet.herokuapp.com/dropdown";
 
     @Test
     public static void dropdownTest() {
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("http://the-internet.herokuapp.com/dropdown");
+        WebDriver driver = UtilityWebDriver.open(URL);
         Select dropdown = new Select(driver.findElement(By.id("dropdown")));
         List<WebElement> dropdownOptions = dropdown.getOptions();
         Assert.assertEquals(dropdownOptions.size(), 3);

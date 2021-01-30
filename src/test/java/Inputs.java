@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class InputsTest {
+public class Inputs {
 
     public static final String INPUTS_URL = "http://the-internet.herokuapp.com/inputs";
 
