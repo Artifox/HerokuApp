@@ -39,12 +39,12 @@ public class DataTables {
         String due = getTextFromTableCellByXpath(table2, "//table[@id='table2']/tbody/tr[4]/td[4]");
         String webSite = getTextFromTableCellByXpath(table2, "//table[@id='table1']/tbody/tr[4]/td[5]");
         String action = getTextFromTableCellByXpath(table2, "//table[@id='table1']/tbody/tr[4]/td[6]");
-        Assert.assertEquals(firstName, "Conway");
-        Assert.assertEquals(lastName, "Tim");
-        Assert.assertEquals(email, "tconway@earthlink.net");
-        Assert.assertEquals(due, "$50.00");
-        Assert.assertEquals(webSite, "http://www.timconway.com");
-        Assert.assertEquals(action, "edit delete");
+        Assert.assertEquals(firstName, "Conway", "ERROR: FirstName is not equal to compared text");
+        Assert.assertEquals(lastName, "Tim", "ERROR: LastName is not equal to compared text");
+        Assert.assertEquals(email, "tconway@earthlink.net", "ERROR: Email is not equal to compared text");
+        Assert.assertEquals(due, "$50.00", "ERROR: Due is not equals to compared text");
+        Assert.assertEquals(webSite, "http://www.timconway.com", "ERROR: WebSite is not equals to compared text");
+        Assert.assertEquals(action, "edit delete", "ERROR: Actions is not equals to compared text");
         driver.quit();
     }
 

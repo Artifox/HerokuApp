@@ -28,8 +28,8 @@ public class HoversTest {
         String name = userAvatars.get(numberOfItem).findElement(By.className("figcaption")).findElement(By.tagName("h5")).getText();
         userAvatars.get(numberOfItem).findElement(By.className("figcaption")).findElement(By.tagName("a")).click();
         String notFoundError = driver.findElement(By.tagName("h1")).getText();
-        Assert.assertEquals(name, "name: user" + (numberOfItem + 1));
-        Assert.assertEquals(notFoundError, "Not Found");
+        Assert.assertEquals(name, "name: user" + (numberOfItem + 1), "ERROR: Username is wrong");
+        Assert.assertEquals(notFoundError, "Not Found", "ERROR: Not Found message is not found");
         driver.get(URL);
     }
 

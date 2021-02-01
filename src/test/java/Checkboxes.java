@@ -12,16 +12,16 @@ public class Checkboxes {
         //first checkbox test
         WebDriver driver = UtilityWebDriver.open(CHECKBOXES_URL);
         boolean isFirstCheckboxSelected = driver.findElement(By.cssSelector("[type=checkbox]")).isSelected();
-        Assert.assertEquals(isFirstCheckboxSelected, false);
+        Assert.assertEquals(isFirstCheckboxSelected, false, "ERROR: First checkbox is selected");
         driver.findElement(By.cssSelector("[type=checkbox]")).click();
         isFirstCheckboxSelected = driver.findElement(By.cssSelector("[type=checkbox]")).isSelected();
-        Assert.assertEquals(isFirstCheckboxSelected, true);
+        Assert.assertEquals(isFirstCheckboxSelected, true, "ERROR: First checkbox is not selected");
         //second checkbox test
         boolean isSecondCheckboxSelected = driver.findElement(By.cssSelector("[type=checkbox]")).isSelected();
-        Assert.assertEquals(isSecondCheckboxSelected, true);
+        Assert.assertEquals(isSecondCheckboxSelected, true, "ERROR: Second checkbox is not selected");
         driver.findElement(By.cssSelector("[type=checkbox]")).click();
         isSecondCheckboxSelected = driver.findElement(By.cssSelector("[type=checkbox]")).isSelected();
-        Assert.assertEquals(isSecondCheckboxSelected, false);
+        Assert.assertEquals(isSecondCheckboxSelected, false,"ERROR: Second checkbox is not selected");
         driver.quit();
     }
 }

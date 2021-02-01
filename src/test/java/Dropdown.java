@@ -15,13 +15,13 @@ public class Dropdown {
         WebDriver driver = UtilityWebDriver.open(URL);
         Select dropdown = new Select(driver.findElement(By.id("dropdown")));
         List<WebElement> dropdownOptions = dropdown.getOptions();
-        Assert.assertEquals(dropdownOptions.size(), 3);
+        Assert.assertEquals(dropdownOptions.size(), 3, "ERROR: Dropdown options are not exist");
         dropdown.selectByVisibleText("Option 1");
         String currentValueOfDropdown = dropdown.getFirstSelectedOption().getText();
-        Assert.assertEquals(currentValueOfDropdown, "Option 1");
+        Assert.assertEquals(currentValueOfDropdown, "Option 1", "ERROR: Wrong dropdown option was selected");
         dropdown.selectByVisibleText("Option 2");
         currentValueOfDropdown = dropdown.getFirstSelectedOption().getText();
-        Assert.assertEquals(currentValueOfDropdown, "Option 2");
+        Assert.assertEquals(currentValueOfDropdown, "Option 2", "ERROR: Wrong dropdown option was selected");
         driver.quit();
     }
 }
