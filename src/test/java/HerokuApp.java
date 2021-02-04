@@ -1,18 +1,15 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class HerokuAppTest {
+public class HerokuApp {
 
     //classwork
     @Test
-    public void siteShouldByOpened(){
-        System.setProperty("webdriver.chrome.driver","src/test/resources/chromedriver.exe");
+    public void siteShouldByOpened() {
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         /*System.setProperty("webdriver.gecko.driver", "src/test/resources/geckodriver.exe");
         WebDriver driver = new FirefoxDriver();*/
